@@ -1,4 +1,11 @@
-# 
+## seifilter,
+build/gst-plugin/libgstseifliter.so
+
+```shell
+export GST_PLUGIN_PATH=/home/pi/gstp/build/gst-plugin
+
+```
+
 
 ## app
 gst-app/src/airplane.c
