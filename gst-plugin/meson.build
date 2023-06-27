@@ -39,7 +39,7 @@ gstaudio_dep = dependency('gstreamer-audio-1.0',
 #)
 
 # # The myfilter Plugin
- gstmyfilter_sources = [
+gstmyfilter_sources = [
   'src/gstmyfilter.c',
   ]
 
@@ -50,6 +50,22 @@ gstmyfilter = library('gstmyfilter',
   install : true,
   install_dir : plugins_install_dir,
 )
+
+
+# seifilter plugin
+ 
+gstseifilter_sources = [
+  'src/gstseifilter.c',
+  ]
+
+gstseifilter = library('gstseifilter',
+  gstseifilter_sources,
+  c_args: plugin_c_args,
+  dependencies : [gst_dep, gstbase_dep],
+  install : true,
+  install_dir : plugins_install_dir,
+)
+
 
 # The Custom Plugin
 #  gstcustplugin_sources = [
